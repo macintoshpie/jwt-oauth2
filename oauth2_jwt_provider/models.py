@@ -10,7 +10,6 @@ from __future__ import absolute_import, unicode_literals
 # Imports from Django
 from django.db import models
 from django.utils import timezone
-from django.utils.encoding import python_2_unicode_compatible
 
 # Imports from Third Party Modules
 from cryptography.exceptions import UnsupportedAlgorithm
@@ -22,7 +21,6 @@ from oauth2_jwt_provider.settings import jwt_oauth2_settings
 from oauth2_jwt_provider.validators import PUB_KEY_LOADERS, validate_public_key
 
 
-@python_2_unicode_compatible
 class PublicKey(models.Model):
     """
     A PublicKey instance represents public_key belonging to a Client
